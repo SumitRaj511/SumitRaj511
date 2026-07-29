@@ -36,7 +36,7 @@ $ echo $CURRENT_FOCUS
 ### 🛠️ Tech Radar
 
 <p align="left">
-  <img src="https://skillicons.dev/icons?i=docker,linux,bash,powershell,git,github,githubactions,jenkins,postman,py,django,postgres,aws,kubernetes,nginx,vscode,threejs" />
+  <img src="https://skillicons.dev/icons?i=docker,linux,bash,powershell,git,github,githubactions,jenkins,postman,py,django,postgres,aws,kubernetes,nginx,vscode" />
 </p>
 
 ```yaml
