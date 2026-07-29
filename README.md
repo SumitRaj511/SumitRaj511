@@ -4,7 +4,7 @@
 
 <p align="center">
   <img src="https://img.shields.io/badge/status-shipping-00FF9C?style=for-the-badge&logo=statuspage&logoColor=black" />
-  <img src="https://img.shields.io/badge/OS-Windows%20%2B%20PowerShell-0078D6?style=for-the-badge&logo=powershell&logoColor=white" />
+  <img src="https://img.shields.io/badge/OS-Windows%20%2B%20Linux-0078D6?style=for-the-badge&logo=linux&logoColor=white" />
   <img src="https://img.shields.io/badge/currently-learning-orange?style=for-the-badge&logo=leetcode&logoColor=white" />
 </p>
 
@@ -18,6 +18,18 @@ $ cat interests.txt
 $ echo $CURRENT_FOCUS
 > Building, breaking, and containerizing things until they behave.
 ```
+
+---
+
+### 🧭 What I'm building right now
+
+| Project | Stack | Status |
+|---|---|---|
+| 🐳 **Docker DevOps Notes App** | Django 5.2 LTS · PostgreSQL · Docker (multi-stage builds) · docker-compose | 🟢 Active |
+| 🚨 **Disaster Shield** | Firebase Firestore · Leaflet + OpenStreetMap · Three.js · Vanilla JS | 🟢 Active |
+| 📝 **Docker vs VM — Deep Dive** | Technical writing · Mermaid diagrams · Real-world benchmarks | ✅ Published |
+
+> Fun fact: my notes app has a full terminal-themed UI — because regular UIs are too mainstream.
 
 ---
 
@@ -40,6 +52,19 @@ currently_debugging:
   - "psycopg binary wheels on Windows 🪟"
   - "WhiteNoise static file collection quirks"
 ```
+
+---
+
+### 📊 GitHub Vibes
+
+<p align="center">
+  <img height="165" src="https://github-readme-stats.vercel.app/api?username=YOUR_USERNAME&show_icons=true&theme=synthwave&hide_border=true&count_private=true" />
+  <img height="165" src="https://github-readme-streak-stats.herokuapp.com/?user=YOUR_USERNAME&theme=synthwave&hide_border=true" />
+</p>
+
+<p align="center">
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=YOUR_USERNAME&layout=compact&theme=synthwave&hide_border=true" />
+</p>
 
 ---
 
