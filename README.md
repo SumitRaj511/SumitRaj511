@@ -36,13 +36,15 @@ $ echo $CURRENT_FOCUS
 ### 🛠️ Tech Radar
 
 <p align="left">
-  <img src="https://skillicons.dev/icons?i=docker,linux,bash,powershell,git,github,githubactions,py,django,postgres,aws,kubernetes,nginx,vscode,threejs" />
+  <img src="https://skillicons.dev/icons?i=docker,linux,bash,powershell,git,github,githubactions,jenkins,postman,py,django,postgres,aws,kubernetes,nginx,vscode,threejs" />
 </p>
 
 ```yaml
 devops:
   containers: [Docker, docker-compose, multi-stage builds]
   vcs: [Git, GitHub, branching workflows]
+  ci_cd: [Jenkins, GitHub Actions]
+  api_testing: [Postman]
   languages: [Python, Bash, PowerShell]
 cloud_and_infra:
   focus: [Infrastructure Engineering, Automation]
