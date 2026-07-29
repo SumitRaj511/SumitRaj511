@@ -1,172 +1,85 @@
-<div align="center">
+<h1 align="center">
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=26&duration=3000&pause=1000&color=00FF9C&center=true&vCenter=true&width=650&lines=Hi+there%2C+I'm+Sumit+%F0%9F%91%8B;DevOps+%7C+Cloud+%7C+Security+Engineer;Automating+Everything+I+Can;Containers+%7C+CI%2FCD+%7C+Infra+as+Code" alt="Typing SVG" />
+</h1>
 
-```
- ██████╗ ███████╗██╗   ██╗ ██████╗ ██████╗ ███████╗
- ██╔══██╗██╔════╝██║   ██║██╔═══██╗██╔══██╗██╔════╝
- ██║  ██║█████╗  ██║   ██║██║   ██║██████╔╝███████╗
- ██║  ██║██╔══╝  ╚██╗ ██╔╝██║   ██║██╔═══╝ ╚════██║
- ██████╔╝███████╗ ╚████╔╝ ╚██████╔╝██║     ███████║
- ╚═════╝ ╚══════╝  ╚═══╝   ╚═════╝ ╚═╝     ╚══════╝
-        N O T E S   //   terminal_mode: true
-```
-
-**A self-hosted, terminal-themed notes app for engineers who live in the CLI.**
-
-[![Django](https://img.shields.io/badge/Django-5.2%20LTS-092E20?style=for-the-badge&logo=django&logoColor=white)](https://www.djangoproject.com/)
-[![PostgreSQL](https://img.shields.io/badge/PostgreSQL-16-4169E1?style=for-the-badge&logo=postgresql&logoColor=white)](https://www.postgresql.org/)
-[![Docker](https://img.shields.io/badge/Docker-Multi--Stage-2496ED?style=for-the-badge&logo=docker&logoColor=white)](https://www.docker.com/)
-[![License](https://img.shields.io/badge/License-MIT-yellow?style=for-the-badge)](LICENSE)
-
-</div>
-
----
-
-## `> whoami`
-
-**DevOps Notes** is a lightweight, self-hosted note-taking app built to actually *learn* DevOps by shipping something real — not just reading about it. Every layer of this repo doubles as a hands-on lesson: containerization, multi-stage builds, environment-driven config, and production-style static file handling.
-
-It looks like a terminal. It runs like a real app. It deploys with one command.
+<p align="center">
+  <img src="https://img.shields.io/badge/status-shipping-00FF9C?style=for-the-badge&logo=statuspage&logoColor=black" />
+  <img src="https://img.shields.io/badge/OS-Windows%20%2B%20PowerShell-0078D6?style=for-the-badge&logo=powershell&logoColor=white" />
+  <img src="https://img.shields.io/badge/currently-learning-orange?style=for-the-badge&logo=leetcode&logoColor=white" />
+</p>
 
 ```bash
-$ docker-compose up --build
-[+] Building ██████████████████████ done
-[+] Running 3/3
- ✔ Container notes_db      Started
- ✔ Container notes_web     Started
- ✔ Container notes_nginx   Started
-$ echo "ready → http://localhost:8000"
+$ whoami
+> sumit — devops engineer in the making, infra tinkerer, terminal enthusiast
+
+$ cat interests.txt
+> DevOps · Cloud Computing · Cyber Security · Automation · Infrastructure Engineering
+
+$ echo $CURRENT_FOCUS
+> Building, breaking, and containerizing things until they behave.
 ```
 
 ---
 
-## `> features --list`
+### 🧭 What I'm building right now
 
-- 🖥️ **Terminal-themed UI** — monospace, dark-mode-first, cursor-blink aesthetic
-- 📝 **Full CRUD notes engine** — create, tag, search, archive
-- 🔐 **Session-based auth** — no bloated third-party identity stack
-- 🐘 **PostgreSQL-backed** — real relational storage, not SQLite toy-mode
-- 🐳 **Multi-stage Dockerfile** — separate build & runtime stages for a lean final image
-- 📦 **docker-compose orchestration** — app + db (+ optional reverse proxy) wired together
-- 🎯 **WhiteNoise static serving** — production-style static files with zero extra infra
-- ⚙️ **12-factor config** — everything sensitive lives in `.env`, never in code
+| Project | Stack | Status |
+|---|---|---|
+| 🐳 **Docker DevOps Notes App** | Django 5.2 LTS · PostgreSQL · Docker (multi-stage builds) · docker-compose | 🟢 Active |
+| 🚨 **Disaster Shield** | Firebase Firestore · Leaflet + OpenStreetMap · Three.js · Vanilla JS | 🟢 Active |
+| 📝 **Docker vs VM — Deep Dive** | Technical writing · Mermaid diagrams · Real-world benchmarks | ✅ Published |
 
----
-
-## `> stack --verbose`
-
-| Layer            | Technology                          |
-|------------------|--------------------------------------|
-| Backend          | Django 5.2 LTS (Python 3.12)         |
-| Database         | PostgreSQL 16                        |
-| Static Files     | WhiteNoise                           |
-| Containerization | Docker (multi-stage build)           |
-| Orchestration    | Docker Compose                       |
-| Frontend         | HTML/CSS (custom terminal theme), vanilla JS |
+> Fun fact: my notes app has a full terminal-themed UI — because regular UIs are too mainstream.
 
 ---
 
-## `> architecture`
+### 🛠️ Tech Radar
 
-```mermaid
-flowchart LR
-    A[Browser] -->|HTTP| B[Nginx / Dev Server]
-    B --> C[Django App Container]
-    C -->|psycopg| D[(PostgreSQL Container)]
-    C --> E[WhiteNoise Static Files]
-    subgraph docker-compose network
-        C
-        D
-    end
-```
+<p align="left">
+  <img src="https://skillicons.dev/icons?i=docker,linux,bash,powershell,git,github,githubactions,py,django,postgres,aws,kubernetes,nginx,vscode,threejs" />
+</p>
 
-The Dockerfile builds in **two stages**:
-
-1. **Builder stage** — installs build deps, compiles wheels, resolves Python packages
-2. **Runtime stage** — copies only the compiled artifacts + app code into a slim final image
-
-Result: a smaller attack surface, faster rebuilds, and no leftover compiler toolchain bloating the shipped container.
-
----
-
-## `> quickstart`
-
-```bash
-# 1. Clone it
-git clone https://github.com/<your-username>/devops-notes-app.git
-cd devops-notes-app
-
-# 2. Configure environment
-cp .env.example .env
-# edit .env with your DB credentials, SECRET_KEY, etc.
-
-# 3. Build & launch
-docker-compose up --build
-
-# 4. Run migrations (first time only)
-docker-compose exec web python manage.py migrate
-
-# 5. Create an admin user
-docker-compose exec web python manage.py createsuperuser
-```
-
-Then open **http://localhost:8000** and start taking notes like it's `vim` — but with a mouse if you insist.
-
----
-
-## `> local-dev-notes`
-
-Built and battle-tested on **Windows + PowerShell**. A couple of platform gotchas worth knowing if you're following along:
-
-- **`psycopg` binary wheels** — on Windows, prefer `psycopg[binary]` in `requirements.txt` to avoid needing a full C build toolchain locally.
-- **WhiteNoise + `collectstatic`** — make sure `STATICFILES_STORAGE` / `STORAGES` is configured *before* running `collectstatic` inside the container, or static assets silently fail to compress/hash correctly.
-
----
-
-## `> project-structure`
-
-```
-devops-notes-app/
-├── notes/                 # Django app: models, views, urls
-├── core/                  # Project settings & config
-├── static/                # Terminal-theme CSS/JS
-├── templates/             # HTML templates
-├── Dockerfile             # Multi-stage build
-├── docker-compose.yml     # App + Postgres orchestration
-├── requirements.txt
-├── .env.example
-└── manage.py
+```yaml
+devops:
+  containers: [Docker, docker-compose, multi-stage builds]
+  vcs: [Git, GitHub, branching workflows]
+  languages: [Python, Bash, PowerShell]
+cloud_and_infra:
+  focus: [Infrastructure Engineering, Automation]
+security:
+  mindset: "assume breach, verify everything"
+currently_debugging:
+  - "psycopg binary wheels on Windows 🪟"
+  - "WhiteNoise static file collection quirks"
 ```
 
 ---
 
-## `> roadmap`
+### 📊 GitHub Vibes
 
-- [ ] CI/CD pipeline (GitHub Actions → build, test, push image)
-- [ ] Tagging & full-text search
-- [ ] Nginx reverse proxy + HTTPS via Let's Encrypt
-- [ ] Kubernetes manifests (learning stretch goal)
-- [ ] Markdown rendering for notes
+<p align="center">
+  <img height="165" src="https://github-readme-stats.vercel.app/api?username=YOUR_USERNAME&show_icons=true&theme=synthwave&hide_border=true&count_private=true" />
+  <img height="165" src="https://github-readme-streak-stats.herokuapp.com/?user=YOUR_USERNAME&theme=synthwave&hide_border=true" />
+</p>
 
----
-
-## `> contributing`
-
-This is primarily a learning project, but issues, suggestions, and PRs are welcome — especially if you spot a more idiomatic Docker or Django pattern.
-
-```bash
-$ git checkout -b feature/your-idea
-$ git commit -m "feat: your idea"
-$ git push origin feature/your-idea
-```
+<p align="center">
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=YOUR_USERNAME&layout=compact&theme=synthwave&hide_border=true" />
+</p>
 
 ---
 
-## `> license`
+### ⚡ Currently
 
-MIT — do what you want with it, just don't blame me if your terminal theme becomes an addiction.
+- 🔭 Learning DevOps by shipping real, working infrastructure — not just tutorials
+- 🐳 Deep in Docker: multi-stage builds, compose networking, and platform-specific gremlins
+- 🌍 Building **Disaster Shield** — a real-time community disaster reporting & alert system
+- ✍️ Writing technical breakdowns (Docker vs VMs, and more to come)
+- 🎯 2026 goal: move from "learning DevOps" to "doing DevOps in production"
 
-<div align="center">
+---
 
-`built with docker, django, and a healthy respect for multi-stage builds.`
+<p align="center">
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:0f0c29,100:00FF9C&height=120&section=footer" />
+</p>
 
-</div>
+<p align="center"><i>"Automate the boring stuff. Containerize the rest."</i></p>
