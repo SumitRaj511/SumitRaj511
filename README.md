@@ -1,5 +1,5 @@
 <h1 align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=26&duration=3000&pause=1000&color=00FF9C&center=true&vCenter=true&width=650&lines=Hi+there%2C+I'm+Sumit+%F0%9F%91%8B;DevOps+%7C+Cloud+%7C+Security+Engineer;Automating+Everything+I+Can;Containers+%7C+CI%2FCD+%7C+Infra+as+Code" alt="Typing SVG" />
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=26&duration=3000&pause=1000&color=00FF9C&center=true&vCenter=true&width=650&lines=Hi+there%2C+I'm+Sumit+%F0%9F%91%8B;Security+%7C+Cloud+%7C+DevOps+Engineer;Automating+Everything+I+Can;Containers+%7C+CI%2FCD+%7C+Infra+as+Code" alt="Typing SVG" />
 </h1>
 
 <p align="center">
@@ -43,17 +43,6 @@ currently_debugging:
   - "WhiteNoise static file collection quirks"
 ```
 
----
-
-### ⚡ Currently
-
-- 🔭 Learning DevOps by shipping real, working infrastructure — not just tutorials
-- 🐳 Deep in Docker: multi-stage builds, compose networking, and platform-specific gremlins
-- 🌍 Building **Disaster Shield** — a real-time community disaster reporting & alert system
-- ✍️ Writing technical breakdowns (Docker vs VMs, and more to come)
-- 🎯 2026 goal: move from "learning DevOps" to "doing DevOps in production"
-
----
 
 <p align="center">
   <img src="https://capsule-render.vercel.app/api?type=waving&color=0:0f0c29,100:00FF9C&height=120&section=footer" />
